@@ -1,0 +1,6 @@
+import { Quote, Star } from "lucide-react";
+import { siteConfig } from "@/config/site-config";
+
+export function Reviews() {
+  return <section className="section reviews-section" id="depoimentos"><div className="container"><div className="reviews-header"><div><p className="eyebrow"><span /> Histórias reais</p><h2>Quando a dor deixa de <em>ser protagonista.</em></h2></div><div className="rating-block"><div className="rating-number">{siteConfig.authority.rating}</div><div><div className="rating-stars"><Star size={16} fill="currentColor" /> <Star size={16} fill="currentColor" /> <Star size={16} fill="currentColor" /> <Star size={16} fill="currentColor" /> <Star size={16} fill="currentColor" /></div><span>Avaliação no Google</span></div></div></div><div className="reviews-grid">{siteConfig.reviews.map((review) => <article className="review-card" key={review.name}><Quote className="quote-mark" size={24} /><p className="review-quote">“{review.quote}”</p><div className="review-author"><span className="author-initial">{review.name.charAt(0)}</span><div><strong>{review.name}</strong><small>{review.detail}</small></div><span className="mini-stars">★★★★★</span></div></article>)}</div></div></section>;
+}
