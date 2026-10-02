@@ -1,4 +1,4 @@
-# Marina Alves | Fisioterapia & Pilates Clínico
+# Clara Andrade | Fisioterapia & Pilates Clínico
 
 Landing page mobile-first para uma profissional de fisioterapia, construída com Next.js, TypeScript, Tailwind CSS e Lucide React. O projeto apresenta especialidades, metodologia, provas sociais, localização e CTAs contextuais para WhatsApp.
 
