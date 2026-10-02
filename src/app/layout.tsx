@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Marina Alves | Fisioterapia & Pilates Clínico",
+  title: "Clara Andrade | Fisioterapia & Pilates Clínico",
   description: "Fisioterapia personalizada e Pilates Clínico para você voltar a viver em movimento.",
 };
 

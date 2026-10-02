@@ -5,8 +5,9 @@ import { Navbar } from "@/components/Navbar";
 import { Pillars } from "@/components/Pillars";
 import { Reviews } from "@/components/Reviews";
 import { Services } from "@/components/Services";
+import { SplashIntro } from "@/components/SplashIntro";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
-  return <><Navbar /><main><Hero /><Services /><Pillars /><Reviews /><Location /></main><Footer /><WhatsAppButton variant="floating" /></>;
+  return <><SplashIntro /><Navbar /><main><Hero /><Services /><Pillars /><Reviews /><Location /></main><Footer /><WhatsAppButton variant="floating" /></>;
 }

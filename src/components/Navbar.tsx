@@ -3,6 +3,7 @@
 import { Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { siteConfig } from "@/config/site-config";
+import { BrandLogo } from "@/components/BrandLogo";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function Navbar() {
@@ -18,7 +19,7 @@ export function Navbar() {
     <header className="site-header">
       <nav className="container nav-inner" aria-label="Navegação principal">
         <a href="#inicio" className="brand" onClick={() => setIsOpen(false)}>
-          <span className="brand-mark">MA</span>
+          <span className="brand-mark"><BrandLogo variant="symbol" /></span>
           <span><strong>{siteConfig.professional.shortName}</strong><small>{siteConfig.professional.crefito}</small></span>
         </a>
         <div className={`nav-links ${isOpen ? "is-open" : ""}`}>

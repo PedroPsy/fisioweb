@@ -1,0 +1,38 @@
+type BrandLogoProps = {
+  variant?: "full" | "symbol";
+  className?: string;
+};
+
+function BrandSymbol({ className = "" }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" className={`w-full h-full ${className}`} aria-hidden="true">
+      <path d="M135 58 C 85 45, 42 78, 45 128 C 48 168, 95 182, 138 158 C 155 148, 165 130, 168 112" stroke="#7BB2AD" strokeWidth="6.5" strokeLinecap="round" fill="none" />
+      <path d="M112 85 C 75 75, 58 105, 68 135 C 76 155, 108 152, 122 130" stroke="#7BB2AD" strokeWidth="6.5" strokeLinecap="round" fill="none" />
+      <path d="M108 92 L 78 156" stroke="#7BB2AD" strokeWidth="6.5" strokeLinecap="round" />
+      <path d="M108 92 L 138 156" stroke="#7BB2AD" strokeWidth="6.5" strokeLinecap="round" />
+      <path d="M105 56 C 95 56, 92 42, 100 36 C 108 30, 118 40, 112 52 C 106 62, 75 60, 62 82" stroke="#7BB2AD" strokeWidth="6" strokeLinecap="round" fill="none" />
+      <path d="M84 185 C 82 162, 108 145, 118 118 C 126 95, 114 80, 120 66 C 125 55, 140 50, 148 35" stroke="#7BB2AD" strokeWidth="6.5" strokeLinecap="round" fill="none" />
+      <g fill="#7BB2AD">
+        <path d="M148 32 C 145 22, 150 14, 153 12 C 156 14, 157 24, 148 32 Z" />
+        <path d="M145 34 C 136 28, 132 20, 133 17 C 137 17, 144 24, 145 34 Z" />
+        <path d="M151 34 C 158 26, 166 22, 170 23 C 168 27, 160 33, 151 34 Z" />
+        <path d="M152 37 C 162 35, 170 38, 173 41 C 169 44, 160 42, 152 37 Z" />
+        <path d="M149 39 C 154 45, 156 52, 154 56 C 150 53, 147 46, 149 39 Z" />
+      </g>
+    </svg>
+  );
+}
+
+export function BrandLogo({ variant = "full", className = "" }: BrandLogoProps) {
+  if (variant === "symbol") return <BrandSymbol className={className} />;
+
+  return (
+    <span className={`brand-logo-full ${className}`}>
+      <BrandSymbol className="brand-logo-symbol" />
+      <span className="brand-logo-copy">
+        <strong>Clara Andrade</strong>
+        <small>Fisioterapia & Pilates Clínico</small>
+      </span>
+    </span>
+  );
+}
